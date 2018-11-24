@@ -1,0 +1,67 @@
+terry-macbook-pro:angular4tuto chung2014$ npm i -g @angular/cli
+terry-macbook-pro:angular4tuto chung2014$ mkdir projects
+terry-macbook-pro:angular4tuto chung2014$ cd projects
+terry-macbook-pro:projects chung2014$ ng new a4app
+terry-macbook-pro:projects chung2014$ cd a4app/
+terry-macbook-pro:a4app chung2014$ ng serve
+
+// update the variable `title` value to 'hello'
+
+// remove all the content in 'app.component.html'
+
+terry-macbook-pro:a4app chung2014$ mkdir src/app/components
+terry-macbook-pro:a4app chung2014$ ng g component components/user
+
+//// auto generate files and codes, update app.module.ts
+
+// add '<app-user></app-user>' to 'app.component.html'
+
+// try write some html in 'user.component.html'
+
+// add a property in 'user.component.ts'
+
+-- in html, {{ }} is called string interpolation. it can take property and output string. this is called string interpolation.
+
+// write some code in 'user.component.ts' to test changing the property, view the `constructor` and `ngOnInit` life cycle.
+
+// write some code in 'user.component.ts' to see the type checking with TypeScript.
+// write some code to see how to write a interface model
+// write some code in 'user.component.html' to see how to read the property using {{}}
+// write some code to see how to use *ngFor in 'user.component.html'
+// write some code in 'user.component.html' and 'user.component.ts' to see event handling
+// write some code in the event handler function in 'user.component.ts' to see how we can change the property in the event handler.
+// write some code to write a form in 'user.component.html', e.g delete a hobby
+
+// write a form in 'user.component.html' to test 2 way data-binding(component <--> template)
+// import FormsModule in 'app.module.ts'
+// write some code in 'user.component.html' to use ngModel data-binding
+
+
+terry-macbook-pro:a4app chung2014$ mkdir src/app/services
+terry-macbook-pro:a4app chung2014$ ng g service services/data
+
+
+// import data services in 'app.module.ts'
+// add service (DataServices) in @NgModule directive `providers` in 'app.module.ts'
+-- whenever you want to use a service, we can do it by dependency injection. 
+// To do the dependency injection of the DataService to the 'user.component.ts', we update the component's constructor to include a parameter.
+
+// write some code in 'data.service.ts' to check if DataService is connected / in use.
+// import HttpModule in 'app.module.ts', like FormsModule. import statement and update the @NgModule directive `imports` array.
+
+// update the constructor in 'data.service.ts' since we need to use the http service. Do dependency injection as what we did in 'user.component.ts'
+// write some code in 'data.service.ts' to make http get call
+// write some code in 'user.component.ts' to subscribe the http call observable.
+// write some code to add posts property to 'user.component.ts' and define the interface `Post` so that we can make posts to `Post[]`
+
+// write some code in the 'user.component.html' to display posts. use ngFor in the div attribute and as well as use the {{}} to get the post value
+
+// write event handler and a ngIf in 'user.component.html' to toggle the edit user form display or not. save the state in the 'user.component.ts'
+
+-- write a router
+terry-macbook-pro:a4app chung2014$ ng g component components/about
+// import { RouterModule, Routes } from '@angular/router' in 'app.module.ts'
+// write a `appRoutes: Routes` array in 'app.module.ts'
+// udpate @NgModule directive `imports` in 'app.module.ts'
+
+// use <router-outlet></router-outlet> in 'app.component.html'
